@@ -35,6 +35,9 @@ class LibSass(Filter):
     LIBSASS_INCLUDES (includes)
         an optional list of paths to find @imported SASS/CSS source files
 
+    LIBSASS_SOURCE_MAP_FILENAME (source_map_filename)
+        option to output a sourcemap alongside the compiled result. If this argument is not passed, no sourcemap will be generated.
+
     LIBSASS_AS_OUTPUT
         use this filter as an "output filter", meaning the source files
         will first be concatenated, and then the Sass filter is applied.
@@ -58,6 +61,7 @@ class LibSass(Filter):
     options = {
         'style': 'LIBSASS_STYLE',
         'includes': 'LIBSASS_INCLUDES',
+        'source_map_filename': 'LIBSASS_SOURCE_MAP_FILENAME',
         'as_output': 'LIBSASS_AS_OUTPUT',
     }
     max_debug_level = None
